@@ -1,0 +1,70 @@
+<% layout("layouts/boilerplate") %>
+<h3 class="heading pt-5">
+  <center>SHARE YOUR EXPERIENCE BELOW, THIS WILL HELP OTHERS</center>
+</h3>
+<form class="p-5" action="/dashboard/cure/exp_people" method="POST">
+  <div class="row mb-3">
+    <label for="username" class="col-sm-2 col-form-label">NAME</label>
+    <div class="col-sm-10">
+      <input
+        type="text"
+        placeholder="NAME"
+        class="form-control"
+        name="username"
+        id="username"
+      />
+    </div>
+  </div>
+  <div class="row mb-3">
+    <label for="email" class="col-sm-2 col-form-label">EMAIL</label>
+    <div class="col-sm-10">
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        name="email"
+        placeholder="EMAIL"
+      />
+    </div>
+  </div>
+  <div class="row mb-3">
+    <label for="phone" class="col-sm-2 col-form-label">PHONE NO.</label>
+    <div class="col-sm-10">
+      <input
+        type="number"
+        class="form-control"
+        id="phone"
+        name="phone"
+        placeholder="PHONE NUMBER"
+      />
+    </div>
+  </div>
+  <div class="row mb-3">
+    <label for="title" class="col-sm-2 col-form-label">TITLE</label>
+    <div class="col-sm-10">
+      <input
+        type="text"
+        class="form-control"
+        id="title"
+        name="title"
+        placeholder="TITLE OF YOUR EXPERIENCE"
+      />
+    </div>
+  </div>
+  <div class="row mb-3">
+    <label for="experience" class="col-sm-2 col-form-label">Problem</label>
+    <div class="col-sm-10">
+      <textarea
+        name="experience"
+        class="form-control"
+        id="experience"
+        cols="100"
+        rows="10"
+      ></textarea>
+    </div>
+  </div>
+  <div class="p-5">
+    <button type="submit" class="btn btn-lg btn-success">POST</button>
+    <a class="btn btn-lg btn-danger m-5" href="/dashboard">BACK</a>
+  </div>
+</form>

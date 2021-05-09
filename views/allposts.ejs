@@ -1,0 +1,16 @@
+<% layout("layouts/boilerplate") %>
+<h1 class="heading"><center> <u>ALL POSTS</u> </h1></center>
+<div class="container"><a class="btn btn-lg btn-danger" href="/dashboard">BACK</a></div>
+<div class="container allposts">
+  <% for(let post of allPosts){ %>
+  <br /><br />
+  <div class="card allpostPost">
+    <div class="card-body" style="height: 18rem;">
+      <h5 class="card-title justify-content-center text-center p-4 m-4">Post By - <b><%= post.username %></b> </h5>
+      <p style="font-size: 2rem;" class="card-text"><b> ISSUE</b> - <%= post.problemDescription %> </p>
+      <a href="https://www.google.com/intl/en-GB/gmail/about/#" class="card-link "><%= post.email %> </a>
+    </div>
+  </div>
+
+  <% } %> 
+</div>

@@ -1,0 +1,134 @@
+<% layout("layouts/boilerplate") %>
+
+<div class="overlay hidden"></div>
+
+<div class="container text-center">
+  <div class="row pt-5">
+    <div class="col-sm-6 text-center pt-5">
+      <div class="card main-card shadow prob-card1">
+        <div class="card-body">
+          <h3 class="card-title pt-5 heading pb-3">Talk to our experts !</h3>
+          <h5 class="card-text">
+            Feel free to share your problems with us, we have a branch of
+            experts to help you out.
+          </h5>
+          <a class="btn post-expert-button btn-primary mt-5">Let's go</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 text-center pt-5">
+      <div class="card main-card shadow prob-card2">
+        <div class="card-body">
+          <h3 class="card-title pt-5 heading pb-3">Post your problem!</h3>
+          <h5 class="card-text">
+            Post about your issues. On myVIBE, we have a great community of
+            people who overcame similar issues, and are helping others.
+          </h5>
+          <a class="btn post-prob-button btn-primary mt-5">Let's go</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="/dashboard" class="btn btn-danger shadow btn-lg mt-5" type="submit"
+    >BACK</a
+  >
+</div>
+
+<div class="post-prob-div hidden">
+  <form class="p-5" action="/dashboard/allposts" method="POST">
+    <div class="row mb-3">
+      <label for="username" class="col-sm-2 col-form-label">NAME</label>
+      <div class="col-sm-10">
+        <input
+          type="text"
+          placeholder="NAME"
+          class="form-control"
+          name="username"
+          id="username"
+        />
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="email" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="email"
+          placeholder="EMAIL"
+        />
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="problemDescription" class="col-sm-2 col-form-label"
+        >Problem</label
+      >
+      <div class="col-sm-10">
+        <textarea
+          name="problemDescription"
+          id="problemDescription"
+          cols="60"
+          rows="5"
+        ></textarea>
+      </div>
+    </div>
+    <div class="p-5">
+      <button type="submit" class="btn btn-success">POST</button>
+      <button type="button" class="btn close1 btn-danger">ClOSE</button>
+    </div>
+  </form>
+</div>
+
+<!-- expert wala -->
+
+<div class="post-expert-div hidden">
+  <form class="p-5" action="/dashboard/problems" method="POST">
+    <div class="row mb-3">
+      <label for="username" class="col-sm-2 col-form-label">NAME</label>
+      <div class="col-sm-10">
+        <input
+          type="text"
+          placeholder="NAME"
+          class="form-control"
+          name="username"
+          id="username"
+        />
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="email" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="email"
+          placeholder="EMAIL"
+        />
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="phone" class="col-sm-2 col-form-label">PHONE NO.</label>
+      <div class="col-sm-10">
+        <input
+          type="number"
+          class="form-control"
+          id="phone"
+          name="phone"
+          placeholder="PHONE NUMBER"
+        />
+      </div>
+    </div>
+    <p>
+      <b>
+        After submiting the form our experts will shortly contact you and help
+        you.</b
+      >
+    </p>
+    <div class="p-5">
+      <button type="submit" class="btn btn-success">POST</button>
+      <button type="button" class="btn close2 btn-danger">ClOSE</button>
+    </div>
+  </form>
+</div>
